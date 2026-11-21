@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usar IA no equivale a integrarla pedagógicamente · Observatorio QCHE</title>
+<style>
+:root{--ink:#14213d;--mut:#4a5568;--bg:#f4f6fa;--card:#fff;--line:#d5dbe6;--acc:#12355b;--acc2:#0f6e6e;--warn:#8a1c1c;--warnbg:#fdecea}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:#0b4f9c}:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:8px;z-index:99}.skip:focus{left:8px}
+nav#menu{position:fixed;left:0;top:0;bottom:0;width:230px;background:var(--acc);color:#fff;padding:18px 12px;overflow:auto;z-index:20}
+nav#menu strong{display:block;font-size:13px;letter-spacing:.04em;margin:0 6px 12px;opacity:.85}
+nav#menu a{display:block;color:#fff;text-decoration:none;padding:10px 12px;border-radius:8px;font-size:14px;margin-bottom:4px;line-height:1.3}
+nav#menu a:hover,nav#menu a.on{background:rgba(255,255,255,.18)}nav#menu a.on{box-shadow:inset 4px 0 #f2a900}
+main{margin-left:230px;padding:24px clamp(14px,3vw,40px) 60px;max-width:1250px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:28px;overflow:hidden}
+section>.body{padding:20px clamp(14px,2.5vw,32px) 26px}.ban{display:block;width:100%;height:auto;max-height:130px}
+h1{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;margin:0 0 8px}h2{margin:0 0 10px;font-size:1.45rem}h3{margin:22px 0 8px;font-size:1.1rem}h4{margin:0 0 6px;font-size:.98rem}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;background:#e3eefc;color:var(--acc)}
+.sim{background:var(--warnbg);color:var(--warn);border:2px solid var(--warn);padding:10px 14px;border-radius:10px;font-weight:700;margin:10px 0}
+.pend{background:#fff7e0;border:1px dashed #b58105;padding:10px 14px;border-radius:10px;margin:10px 0}
+.ok{background:#e7f5ee;border:1px solid #2d6a4f;padding:10px 14px;border-radius:10px;margin:10px 0}
+details{border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin:12px 0;background:#fafbfd}summary{cursor:pointer;font-weight:600}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:8px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#eaeff7;position:sticky;top:0}
+td[contenteditable]{background:#fffef5}
+button,select,input[type=file]{font:inherit;font-size:14px;padding:7px 11px;border-radius:8px;border:1px solid #8793a8;background:#fff;color:var(--ink)}
+button{cursor:pointer;background:var(--acc);color:#fff;border-color:var(--acc)}button.sec{background:#fff;color:var(--acc)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:end;margin:10px 0}.bar label{display:flex;flex-direction:column;font-size:12.5px;font-weight:600;gap:3px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}.kpi{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:#f9fbfe}.kpi small{color:var(--mut);display:block}.kpi b{font-size:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:14px}
+figure.card{margin:0;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}figure svg{width:100%;height:auto;max-width:100%}
+.note{font-size:12.5px;color:var(--mut);margin:4px 0}.empty{color:var(--warn);font-style:italic;padding:18px 4px}
+ul.tree,ul.tree ul{list-style:none;margin:0;padding-left:20px;border-left:2px solid #9fb0c8}ul.tree{border:0;padding:0}ul.tree li{margin:5px 0;position:relative;padding-left:10px}ul.tree li:before{content:"";position:absolute;left:-20px;top:13px;width:18px;border-top:2px solid #9fb0c8}ul.tree>li:before{display:none}
+.map{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}.map span{padding:8px 12px;border-radius:10px;background:#e3eefc;font-size:14px}.map .c{background:var(--acc);color:#fff;font-weight:700}
+@media(max-width:900px){nav#menu{position:sticky;width:auto;display:flex;gap:4px;overflow-x:auto;padding:8px;top:0}nav#menu strong{display:none}nav#menu a{white-space:nowrap;margin:0}main{margin-left:0}}
+@media(max-width:560px){body{font-size:15px}th,td{padding:6px}}
+@media print{nav#menu,.noprint,button,input,select{display:none!important}main{margin:0}section{break-inside:avoid-page;border:0}details{display:block}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<nav id="menu" aria-label="Menú de secciones">
+<strong>OBSERVATORIO QCHE</strong>
+<a href="#inicio">Inicio y árbol</a><a href="#s11">1.1 Análisis de resultados</a><a href="#s12">1.2 Diseño del dashboard</a><a href="#s13">1.3 Hacer el dashboard</a><a href="#s14">1.4 Evaluar el dashboard</a><a href="#s15">1.5 Conclusiones y recomendaciones</a>
+</nav>
+<main id="contenido">
+
+<section id="inicio" aria-labelledby="t0"><div data-ban="0"></div><div class="body">
+<span class="badge">Maestría en Ciencias de la Educación · Estudio descriptivo-correlacional</span>
+<h1 id="t0">Usar IA no equivale a integrarla pedagógicamente: competencias docentes y prácticas de enseñanza en Ciencias Sociales</h1>
+<p>Docentes de Ciencias Sociales de instituciones educativas públicas de San José de Cúcuta, Norte de Santander, Colombia.</p>
+<h3>Presentación del sitio</h3>
+<p>Este recurso muestra cómo utilizar un <strong>prompt efectivo</strong> para pasar de una base de datos a un dashboard académico. Fue creado por <strong>JHONNY ALEJANDRO HERNANDEZ GARCIA</strong> bajo la metodología <strong>QCHE</strong> del Dr. Raúl E. Rodríguez Ibáñez: <em>¿Qué voy a hacer? ¿Cómo lo voy a hacer? Hacer y Evaluar</em>.</p>
+<p>Licencia: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="noopener">Creative Commons BY-NC-SA 4.0</a> (puedes cambiarla por otra CC si el autor lo prefiere).</p>
+<div class="pend" role="note"><strong>Estado real de los datos.</strong> El archivo <code>Resultados.xlsx</code> trae la hoja <code>Respuestas_docentes</code> <strong>vacía</strong> (0 de 200 filas diligenciadas). Sus otras seis hojas contienen 60 registros <strong>simulados de estudiantes universitarios</strong>; el propio libro indica «NO usar en dashboard de tesis». Por eso este sitio <strong>no presenta resultados</strong>: deja listo el diccionario, el diseño, un dashboard que se llena al cargar datos docentes reales y las conclusiones como campos pendientes.</div>
+<h3>Árbol jerárquico de contenidos</h3>
+<ul class="tree" aria-label="Árbol de contenidos">
+<li><strong>Observatorio QCHE</strong>
+<ul>
+<li><a href="#s11">1.1 Análisis de resultados</a> (¿Cómo lo voy a hacer?)<ul><li>Prompt de diccionario de variables</li><li>Grupos: caracterización · competencias IA · integración pedagógica · ética</li><li>Recodificación y limitaciones</li></ul></li>
+<li><a href="#s12">1.2 Diseño del dashboard</a><ul><li>Mapa conceptual y navegación</li><li>Tabla de especificaciones (5 secciones)</li></ul></li>
+<li><a href="#s13">1.3 Hacer el dashboard</a><ul><li>Carga local, validación y filtros</li><li>Indicadores, gráficos y tablas</li><li>Metodología y descargas</li></ul></li>
+<li><a href="#s14">1.4 Evaluar el dashboard</a><ul><li>Autoevaluación con la rúbrica</li><li>Validación científica del instrumento (pendiente)</li></ul></li>
+<li><a href="#s15">1.5 Conclusiones y recomendaciones</a><ul><li>Hallazgos · interpretación · formación docente</li></ul></li>
+</ul></li></ul>
+</div></section>
+
+<section id="s11" aria-labelledby="t11"><div data-ban="1"></div><div class="body">
+<h2 id="t11">1.1 Análisis de resultados · ¿Cómo lo voy a hacer?</h2>
+<details><summary>Prompt ejecutado (síntesis)</summary><p>«Actúa como investigador en educación con experiencia en métodos cuantitativos descriptivos y correlacionales. A partir de [BASE_DE_DATOS] y [ENCUESTA], elabora un diccionario de variables (nombre, definición, dimensión, tipo, escala, codificación y valores perdidos). Agrupa en caracterización docente, competencias en IA, integración pedagógica y ética. Calcula solo estadísticas sustentadas en datos; si no hay datos, genera una plantilla sin resultados. Señala recodificaciones y limitaciones. Entrega tabla editable y texto académico. No inventes participantes, porcentajes ni correlaciones.»</p></details>
+<h3>Resultado: diccionario de variables (editable)</h3>
+<p class="note">Fuente: hojas <code>Diccionario_variables</code> y <code>Respuestas_docentes</code> de <code>Resultados.xlsx</code>. Haz clic en las celdas amarillas para editarlas.</p>
+<div class="bar noprint"><button id="dlDic" type="button">Descargar diccionario (CSV)</button></div>
+<div class="tw"><table id="dic"><thead><tr><th>Variable</th><th>Definición</th><th>Dimensión</th><th>Tipo</th><th>Escala</th><th>Codificación</th><th>Valores perdidos</th></tr></thead><tbody></tbody></table></div>
+<h3>Texto académico</h3>
+<p>Las variables se agrupan en cuatro bloques: caracterización docente, competencias en IA (CD1–CD4), integración pedagógica (IP1–IP4) y ética (ET1–ET3). Los once ítems usan una escala Likert de 1 a 5. Aunque la escala es ordinal, se calcularán medias por dimensión como convención habitual en este tipo de estudios, y se complementarán con frecuencias y con correlación de Spearman, que no exige intervalos iguales.</p>
+<h3>Decisiones de recodificación</h3>
+<ul><li>Los valores no enteros o fuera de 1–5 se tratan como <strong>perdidos</strong> y no se imputan.</li><li>Cada promedio de dimensión se calcula solo si el docente respondió <strong>todos</strong> los ítems de esa dimensión.</li><li>La experiencia se agrupa en 0–5, 6–10, 11–20 y más de 20 años solo para filtrar.</li><li>Se eliminan columnas con posibles datos personales (nombre, cédula, correo, teléfono).</li></ul>
+<h3>Limitaciones</h3>
+<ul><li>Aún no hay respuestas docentes: no existe ningún resultado que reportar.</li><li>Los enunciados son «propuestos» y falta su validación de contenido y de consistencia interna.</li><li>La base no incluye edad ni formación académica, aunque el estudio las contempla.</li><li>Con muestras pequeñas, los filtros pueden identificar personas; el dashboard oculta subgrupos con n &lt; 5.</li></ul>
+</div></section>
+
+<section id="s12" aria-labelledby="t12"><div data-ban="2"></div><div class="body">
+<h2 id="t12">1.2 Diseño del dashboard</h2>
+<details><summary>Prompt ejecutado (síntesis)</summary><p>«Actúa como diseñador de información educativa. Diseña un mapa conceptual y un esquema de navegación para un dashboard sobre competencias docentes en IA e integración pedagógica en Ciencias Sociales de instituciones públicas de San José de Cúcuta. Incluye cinco secciones: caracterización, competencias IA, integración pedagógica, ética y relaciones entre variables. Para cada una define preguntas analíticas, indicadores, filtros, visualización y advertencias. Usa solo variables de [DICCIONARIO_DE_VARIABLES]. Entrega esquema y tabla de especificaciones.»</p></details>
+<h3>Mapa conceptual</h3>
+<div class="map" role="img" aria-label="Mapa conceptual: las competencias docentes en IA, la integración pedagógica y la ética se relacionan mediante asociación, no causalidad."><span class="c">Docente de Ciencias Sociales</span>→<span>Competencias IA (CD)</span><span>↔ asociación (no causalidad) ↔</span><span>Integración pedagógica (IP)</span>←<span>Ética y uso responsable (ET)</span><span>Contexto: institución · experiencia · formación · frecuencia de uso</span></div>
+<h3>Esquema de navegación</h3>
+<p class="map"><span class="c">Estado de datos y filtros</span>→<span>1 Caracterización</span>→<span>2 Competencias IA</span>→<span>3 Integración</span>→<span>4 Ética</span>→<span>5 Relaciones</span>→<span>Metodología y descargas</span></p>
+<h3>Tabla de especificaciones</h3>
+<div class="tw"><table id="spec"><thead><tr><th>Sección</th><th>Preguntas analíticas</th><th>Indicadores</th><th>Filtros</th><th>Visualización</th><th>Advertencias</th></tr></thead><tbody></tbody></table></div>
+</div></section>
+
+<section id="s13" aria-labelledby="t13"><div data-ban="3"></div><div class="body">
+<h2 id="t13">1.3 Hacer el dashboard</h2>
+<details><summary>Prompt ejecutado (síntesis)</summary><p>«Actúa como desarrollador de visualizaciones académicas. Con [BASE_DE_DATOS], [DICCIONARIO_DE_VARIABLES] y [ESQUEMA_DASHBOARD], crea una página responsive, accesible y con filtros útiles. Gráficos solo cuando los datos y escalas lo justifiquen. Muestra n, denominadores, fuente y valores perdidos. Diferencia descriptivos de asociaciones; no infieras causalidad. Sin datos personales. Si faltan datos, maqueta rotulada «DATOS SIMULADOS».»</p></details>
+<div id="estado" role="status" aria-live="polite"></div>
+<div class="bar noprint">
+<label>Cargar Respuestas_docentes (.csv o .xlsx)<input type="file" id="file" accept=".csv,.tsv,.xlsx"></label>
+<button type="button" id="tpl" class="sec">Descargar plantilla vacía (CSV)</button>
+<button type="button" id="demo" class="sec">Ver maqueta con DATOS SIMULADOS</button>
+<button type="button" id="clear" class="sec">Quitar datos</button>
+<button type="button" id="print">Imprimir / guardar PDF</button>
+</div>
+<p class="note">Todo se procesa en tu navegador; ningún dato se envía a servidores. Los archivos .xlsx cargan la librería SheetJS desde internet; con .csv funciona sin conexión.</p>
+<div id="valid"></div>
+<div class="bar noprint" id="filtros" aria-label="Filtros"></div>
+<div class="kpis" id="kpis"></div>
+<div class="grid" id="charts"></div>
+<h3>Metodología</h3>
+<ul><li><strong>Diseño:</strong> cuantitativo, descriptivo-correlacional, transversal. Describe y asocia; no explica causas.</li><li><strong>Medias:</strong> por ítem y por dimensión (1–5). Denominador = respuestas válidas, que se muestra en cada gráfico.</li><li><strong>Asociación:</strong> Spearman (rho), apropiada para datos ordinales, y Pearson (r) como complemento. Sin valor p porque la muestra no es probabilística y el cálculo aquí es exploratorio.</li><li><strong>Faltantes:</strong> no se imputan; se reportan por ítem.</li><li><strong>Anonimato:</strong> sin identificadores; subgrupos con n &lt; 5 se ocultan.</li><li><strong>Fecha de corte:</strong> momento de carga del archivo, indicado arriba.</li></ul>
+</div></section>
+
+<section id="s14" aria-labelledby="t14"><div data-ban="4"></div><div class="body">
+<h2 id="t14">1.4 Evaluar el dashboard</h2>
+<details><summary>Prompt ejecutado</summary><p>«Con la rúbrica anexa evalúa el dashboard realizado.» Criterios y pesos tomados de <code>Rubrica.xlsx</code>.</p></details>
+<h3>A. Autoevaluación del producto (preliminar y editable)</h3>
+<p class="note">Evalúa la página y el dashboard, no la validez de la tesis. Puntaje de 1 a 4. Las observaciones son de quien desarrolló el producto y conviene contrastarlas con un evaluador externo.</p>
+<div class="tw"><table id="rub"><thead><tr><th>Criterio</th><th>Peso %</th><th>Qué se espera (nivel 4)</th><th>Puntaje</th><th>Evidencia / observaciones</th></tr></thead><tbody></tbody></table></div>
+<div class="kpis"><div class="kpi"><small>Resultado ponderado / 4</small><b id="rPond">—</b></div><div class="kpi"><small>Cumplimiento</small><b id="rCum">—</b></div><div class="kpi"><small>Estado</small><b id="rEst" style="font-size:1.1rem">—</b></div></div>
+<p class="note">Escala de la rúbrica: ≥ 87,5 % excelente; ≥ 75 % bueno; ≥ 62,5 % regular; menor, requiere mejoras.</p>
+<h3>B. Validación científica del instrumento (pendiente, es otra cosa)</h3>
+<p>La autoevaluación no valida el cuestionario. Esto sigue sin hacerse:</p>
+<ul style="list-style:none;padding-left:4px"><li><label><input type="checkbox"> Validez de contenido por juicio de expertos</label></li><li><label><input type="checkbox"> Alineación con el marco de competencias en IA para docentes (UNESCO)</label></li><li><label><input type="checkbox"> Prueba piloto y revisión de redacción</label></li><li><label><input type="checkbox"> Consistencia interna (alfa de Cronbach u omega) con datos reales</label></li><li><label><input type="checkbox"> Consentimiento informado y aval ético</label></li></ul>
+</div></section>
+
+<section id="s15" aria-labelledby="t15"><div data-ban="5"></div><div class="body">
+<h2 id="t15">1.5 Conclusiones y recomendaciones</h2>
+<details><summary>Prompt ejecutado (síntesis)</summary><p>«Actúa como asesor metodológico de tesis de maestría. A partir de [RESULTADOS_VALIDADOS], [OBJETIVOS_DE_TESIS] y [EVALUACIÓN_DASHBOARD], redacta conclusiones y recomendaciones diferenciando hallazgos empíricos, interpretación y propuestas de formación docente. Examina si el uso de IA coincide o no con integración pedagógica. No generalices fuera de la muestra ni afirmes causalidad. Si faltan resultados, entrega una estructura con campos pendientes.»</p></details>
+<div class="pend"><strong>Pendiente.</strong> No hay resultados validados, por lo que no se redactan hallazgos. Cuando cargues datos docentes reales, el bloque de hallazgos se genera solo con lo calculado.</div>
+<h3>Objetivos de la tesis</h3><p contenteditable="true" style="background:#fffef5;padding:8px;border:1px solid var(--line)">[PENDIENTE: pega aquí los objetivos de la tesis]</p>
+<h3>1. Hallazgos empíricos</h3><div id="hall" class="pend">[PENDIENTE: sin datos reales cargados]</div>
+<h3>2. Interpretación</h3><p contenteditable="true" style="background:#fffef5;padding:8px;border:1px solid var(--line)">[PENDIENTE: ¿coincide el uso de IA con integración pedagógica en esta muestra? Redactar tras ver la tabla «uso vs. integración». Limitar la lectura a la muestra y a asociaciones.]</p>
+<h3>3. Propuestas de formación docente</h3>
+<p class="note">Son propuestas de diseño basadas en la distinción conceptual de la tesis y en el marco UNESCO, no hallazgos. Se ajustarán a los resultados.</p>
+<ul><li>Talleres que partan de objetivos de aprendizaje de Ciencias Sociales y no de la herramienta (relacionado con IP1).</li><li>Prácticas de análisis crítico de fuentes con apoyo de IA, comparando con fuentes primarias (IP2).</li><li>Rúbricas que evalúen el proceso de aprendizaje y no solo el producto generado (IP4).</li><li>Módulo breve sobre datos personales, sesgos y transparencia con estudiantes (ET1–ET3).</li></ul>
+<h3>Referencias (APA 7.ª ed.)</h3>
+<ul><li>Hernández-Sampieri, R., &amp; Mendoza, C. P. (2018). <em>Metodología de la investigación: Las rutas cuantitativa, cualitativa y mixta</em>. McGraw-Hill.</li><li>Miao, F., &amp; Cukurova, M. (2024). <em>AI competency framework for teachers</em>. UNESCO. <a href="https://doi.org/10.54675/ZJTE2084" rel="noopener">https://doi.org/10.54675/ZJTE2084</a></li></ul>
+<p class="note">Imágenes de cada sección: ilustraciones decorativas vectoriales sin valor informativo. Puedes sustituirlas por imágenes generadas con IA.</p>
+</div></section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const DIMS={CD:{n:'Competencias IA',it:['CD1','CD2','CD3','CD4'],c:'#1d4e89'},IP:{n:'Integración pedagógica',it:['IP1','IP2','IP3','IP4'],c:'#b4570a'},ET:{n:'Ética',it:['ET1','ET2','ET3'],c:'#2d6a4f'}};
+const ITEMS=Object.values(DIMS).flatMap(d=>d.it);
+const ENUN={CD1:'Comprendo conceptos básicos, capacidades y limitaciones de la inteligencia artificial.',CD2:'Puedo seleccionar herramientas de IA apropiadas para tareas docentes.',CD3:'Evalúo críticamente la exactitud y confiabilidad de respuestas generadas por IA.',CD4:'Sé formular instrucciones claras para obtener resultados pertinentes con IA.',IP1:'Planifico actividades de Ciencias Sociales con IA vinculadas a objetivos de aprendizaje.',IP2:'Utilizo IA para promover análisis crítico de fuentes y procesos históricos o sociales.',IP3:'Adapto actividades con IA a necesidades y contextos de mis estudiantes.',IP4:'Evalúo el aprendizaje y no solamente el producto generado mediante IA.',ET1:'Protejo datos personales al utilizar herramientas de IA.',ET2:'Identifico sesgos, riesgos y desinformación en contenidos producidos por IA.',ET3:'Explico a estudiantes criterios de transparencia y uso responsable de IA.'};
+const LV=['1 Totalmente en desacuerdo','2 En desacuerdo','3 Neutral','4 De acuerdo','5 Totalmente de acuerdo'];
+let RAW=[],DEMO=false,META=null;const F={inst:'',exp:'',form:'',frec:''};
+const fmt=(x,d=2)=>x==null||isNaN(x)?'—':x.toLocaleString('es-CO',{minimumFractionDigits:d,maximumFractionDigits:d});
+const mean=a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:null;
+const sd=a=>{if(a.length<2)return null;const m=mean(a);return Math.sqrt(a.reduce((s,v)=>s+(v-m)**2,0)/(a.length-1))};
+function rank(a){const ix=a.map((v,i)=>[v,i]).sort((x,y)=>x[0]-y[0]),r=[];let i=0;while(i<ix.length){let j=i;while(j+1<ix.length&&ix[j+1][0]===ix[i][0])j++;for(let k=i;k<=j;k++)r[ix[k][1]]=(i+j)/2+1;i=j+1}return r}
+function pearson(x,y){const n=x.length;if(n<3)return null;const mx=mean(x),my=mean(y);let a=0,b=0,c=0;for(let i=0;i<n;i++){a+=(x[i]-mx)*(y[i]-my);b+=(x[i]-mx)**2;c+=(y[i]-my)**2}return b&&c?a/Math.sqrt(b*c):null}
+const spear=(x,y)=>pearson(rank(x),rank(y));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* Banners decorativos */
+const BC=['#12355b','#0f6e6e','#5b2a86','#9a4a08','#245c43','#1d4e89'];
+$$('[data-ban]').forEach(el=>{const k=+el.dataset.ban;let s='';const P=[];for(let i=0;i<16;i++){const x=(i*113+k*71)%820,y=15+(i*37+k*23)%100;P.push([x,y]);s+=`<circle cx="${x}" cy="${y}" r="${5+(i*5+k)%14}" fill="#fff" opacity="${.1+(i%4)*.05}"/>`}
+for(let i=1;i<P.length;i++)if((i+k)%2)s+=`<line x1="${P[i-1][0]}" y1="${P[i-1][1]}" x2="${P[i][0]}" y2="${P[i][1]}" stroke="#fff" opacity=".25"/>`;
+s+=`<rect x="0" y="108" width="800" height="12" fill="#f2a900" opacity=".85"/>`;
+el.innerHTML=`<svg class="ban" viewBox="0 0 800 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="800" height="120" fill="${BC[k]}"/>${s}</svg>`});
+
+/* 1.1 Diccionario */
+const DIC=[['Institucion_codigo','Código anónimo de la institución educativa del docente','Caracterización','Categórica nominal','Códigos','Texto; nunca el nombre real','Vacío = perdido'],['Experiencia_anos','Años de experiencia como docente','Caracterización','Numérica discreta','Razón (años)','Agrupada en 0–5, 6–10, 11–20, &gt;20 para filtrar','Vacío o no numérico = perdido'],['Formacion_IA','Reporta haber recibido formación en IA','Caracterización','Categórica dicotómica','Sí / No','Sí = 1, No = 0','Vacío = perdido'],['Frecuencia_uso_IA','Frecuencia de uso de IA por el docente','Caracterización (uso)','Ordinal','Categorías de la base (p. ej., Semanalmente, Diariamente)','Se conservan las etiquetas originales','Vacío = perdido'],['Edad; formación académica','Previstas en el estudio','Caracterización','—','—','—','<b>PENDIENTE:</b> no existen columnas en la base']];
+Object.entries(DIMS).forEach(([k,d])=>d.it.forEach(c=>DIC.push([c,ENUN[c],d.n,'Ordinal (Likert)','Likert 1–5','1 = Totalmente en desacuerdo … 5 = Totalmente de acuerdo','Vacío o fuera de 1–5 = perdido; sin imputar'])));
+Object.entries({Prom_competencias:['CD','Media de CD1–CD4'],Prom_integracion:['IP','Media de IP1–IP4'],Prom_etica:['ET','Media de ET1–ET3']}).forEach(([v,[k,t]])=>DIC.push([v,t+' (derivada)',DIMS[k].n,'Numérica derivada','1,00–5,00','Solo si responde todos los ítems','Perdido si falta algún ítem']));
+$('#dic tbody').innerHTML=DIC.map(r=>'<tr>'+r.map((c,i)=>`<td${i?' contenteditable="true"':''}>${c}</td>`).join('')+'</tr>').join('');
+
+/* 1.2 Especificaciones */
+const SPEC=[['1 Caracterización','¿Quiénes respondieron y con qué experiencia, formación y frecuencia de uso?','n; distribución de Experiencia_anos, Formacion_IA, Frecuencia_uso_IA','Institución, experiencia, formación','Barras de frecuencia y tarjetas de n','Describe la muestra; no la población. Ocultar n &lt; 5.'],['2 Competencias IA','¿Qué nivel declaran en CD1–CD4 y cómo se distribuyen?','Media por ítem; Prom_competencias; % por nivel','Los cuatro filtros','Barras por ítem, apiladas, histograma','Autopercepción, no desempeño observado.'],['3 Integración pedagógica','¿Con qué intensidad declaran integrar IA en planificación, análisis crítico, adaptación y evaluación (IP1–IP4)?','Media por ítem; Prom_integracion; % por nivel','Los cuatro filtros','Barras por ítem, apiladas, histograma','IP mide prácticas declaradas, no calidad pedagógica.'],['4 Ética','¿Cómo declaran proteger datos, detectar sesgos y explicar el uso responsable (ET1–ET3)?','Media por ítem; Prom_etica; % por nivel','Los cuatro filtros','Barras por ítem y apiladas','Posible deseabilidad social.'],['5 Relaciones entre variables','¿Se asocian Prom_competencias y Prom_integracion? ¿Coincide el uso de IA con la integración?','rho de Spearman, r de Pearson, n; medias por Frecuencia_uso_IA','Institución, experiencia, formación','Dispersión, matriz de correlaciones, tabla uso vs. integración','Asociación no es causalidad; muestra no probabilística.']];
+$('#spec tbody').innerHTML=SPEC.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('');
+
+/* 1.4 Rúbrica */
+const RUB=[['Coherencia con objetivos de investigación',15,'Indicadores vinculados con objetivos, variables y población docente de Ciencias Sociales de Cúcuta.',3,'Usa solo variables del diccionario. Faltan los objetivos formales de la tesis.'],['Validez conceptual de dimensiones',15,'Distingue competencias, integración pedagógica y ética, con definiciones.',3,'Tres dimensiones separadas; ítems propuestos sin validar.'],['Rigor estadístico y trazabilidad',20,'Cálculos verificables, N, faltantes, fuentes y fecha de corte; sin causalidad.',3,'Muestra n, faltantes y fecha de corte. No probado con datos reales.'],['Pertinencia de gráficos e interpretación',15,'Gráficos adecuados a escalas; títulos y lectura clara.',3,'Gráficos acordes a Likert. Pendiente revisar con datos reales.'],['Interactividad y funcionamiento',10,'Filtros útiles y funcionales; estados vacíos.',3,'Filtros, estados vacíos y carga local funcionan; falta prueba en los 4 navegadores.'],['Diseño, accesibilidad y legibilidad',10,'Jerarquía visual, contraste y diseño adaptable.',3,'Responsive, teclado y ARIA. Falta auditoría con lector de pantalla.'],['Ética, privacidad y transparencia',10,'Datos anonimizados; distingue reales y simulados.',4,'Procesa en local, excluye la base de estudiantes y rotula la maqueta como SIMULADA.'],['Conclusiones y utilidad educativa',5,'Conclusiones derivadas de evidencia y recomendaciones viables.',2,'Solo estructura: no hay resultados para concluir.']];
+$('#rub tbody').innerHTML=RUB.map((r,i)=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td><select aria-label="Puntaje ${esc(r[0])}" data-i="${i}">${[1,2,3,4].map(v=>`<option${v==r[3]?' selected':''}>${v}</option>`).join('')}</select></td><td contenteditable="true">${r[4]}</td></tr>`).join('');
+function rubCalc(){let a=0,w=0;$$('#rub select').forEach(s=>{const p=RUB[s.dataset.i][1];a+=p*s.value;w+=p});const m=a/w;$('#rPond').textContent=fmt(m);$('#rCum').textContent=fmt(m/4*100,1)+' %';const c=m/4;$('#rEst').textContent=c>=.875?'Excelente':c>=.75?'Bueno':c>=.625?'Regular':'Requiere mejoras'}
+$('#rub').addEventListener('change',rubCalc);rubCalc();
+
+/* Utilidades de descarga */
+function dl(b,n){const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=n;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+function tableCSV(t,n){const rows=[...t.rows].map(r=>[...r.cells].map(c=>'"'+c.textContent.replace(/"/g,'""').trim()+'"').join(','));dl(new Blob(['\uFEFF'+rows.join('\n')],{type:'text/csv'}),n)}
+function png(id){const s=$('#'+id+' svg');if(!s)return alert('No hay gráfico para exportar.');const w=+s.getAttribute('width'),h=+s.getAttribute('height'),im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=w*2;c.height=h*2;const x=c.getContext('2d');x.scale(2,2);x.drawImage(im,0,0,w,h);c.toBlob(b=>dl(b,id+'.png'))};im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(new XMLSerializer().serializeToString(s))}
+$('#dlDic').onclick=()=>tableCSV($('#dic'),'diccionario_variables.csv');
+$('#print').onclick=()=>print();
+$('#tpl').onclick=()=>dl(new Blob(['\uFEFF'+['ID_anonimo','Institucion_codigo','Experiencia_anos','Formacion_IA','Frecuencia_uso_IA',...ITEMS].join(',')+'\n'],{type:'text/csv'}),'plantilla_respuestas_docentes.csv');
+
+/* Carga y validación */
+function parseCSV(t){t=t.replace(/^\uFEFF/,'');const l=t.split('\n')[0],d=l.includes(';')?';':l.includes('\t')?'\t':',',out=[];let row=[],cur='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){cur+='"';i++}else q=false}else cur+=c}else if(c=='"')q=true;else if(c==d){row.push(cur);cur=''}else if(c=='\n'||c=='\r'){if(c=='\r'&&t[i+1]=='\n')i++;row.push(cur);out.push(row);row=[];cur=''}else cur+=c}if(cur||row.length){row.push(cur);out.push(row)}return out}
+function ingest(m,src){const H=m[0].map(s=>String(s==null?'':s).trim()),rep={src,read:0,used:0,noItems:0,invalid:0,miss:{},ign:[],dup:0,warn:[]};
+if(!ITEMS.some(c=>H.includes(c))){const stu=H.includes('ID_estudiante')||H.includes('Curso');return{err:stu?'Este archivo parece la base simulada de estudiantes (ID_estudiante, Curso). No corresponde a la tesis y no se carga. Usa la hoja Respuestas_docentes con datos docentes reales.':'No se encontraron las columnas CD1–CD4, IP1–IP4 y ET1–ET3.'}}
+H.forEach(h=>{if(/nombre|c[eé]dula|correo|e-?mail|documento|tel[eé]fono|celular/i.test(h))rep.ign.push(h)});
+ITEMS.forEach(c=>{rep.miss[c]=0;if(!H.includes(c))rep.warn.push('Falta la columna '+c)});
+const g=(r,k)=>{const i=H.indexOf(k);return i<0||r[i]==null?'':String(r[i]).trim()},ids=new Set(),rows=[];
+m.slice(1).forEach(r=>{if(r.every(v=>v==null||String(v).trim()===''))return;rep.read++;const o={inst:g(r,'Institucion_codigo'),form:g(r,'Formacion_IA'),frec:g(r,'Frecuencia_uso_IA')},e=Number(g(r,'Experiencia_anos').replace(',','.'));o.expn=g(r,'Experiencia_anos')!==''&&isFinite(e)?e:null;o.exp=o.expn==null?'Sin dato':o.expn<=5?'0–5':o.expn<=10?'6–10':o.expn<=20?'11–20':'>20';
+const id=g(r,'ID_anonimo');if(id){if(ids.has(id))rep.dup++;ids.add(id)}let n=0;
+ITEMS.forEach(c=>{const raw=g(r,c),v=Number(raw.replace(',','.'));if(raw===''){o[c]=null;rep.miss[c]++}else if(Number.isInteger(v)&&v>=1&&v<=5){o[c]=v;n++}else{o[c]=null;rep.invalid++;rep.miss[c]++}});
+if(!n){rep.noItems++;return}Object.entries(DIMS).forEach(([k,d])=>{const vs=d.it.map(c=>o[c]);o['P'+k]=vs.every(v=>v!=null)?mean(vs):null});rows.push(o)});
+rep.used=rows.length;return{rows,rep}}
+function setData(res,demo){if(res.err){$('#valid').innerHTML=`<div class="sim" role="alert">${res.err}</div>`;return}RAW=res.rows;DEMO=!!demo;META=res.rep;META.date=new Date().toLocaleString('es-CO');Object.keys(F).forEach(k=>F[k]='');buildFilters();render()}
+$('#file').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(/\.xlsx$/i.test(f.name)){if(!window.XLSX)await new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';s.onload=ok;s.onerror=()=>no(new Error('No se pudo cargar SheetJS (¿sin internet?). Exporta la hoja a CSV.'));document.head.appendChild(s)});const wb=XLSX.read(await f.arrayBuffer(),{type:'array'}),sn=wb.SheetNames.includes('Respuestas_docentes')?'Respuestas_docentes':wb.SheetNames[0];setData(ingest(XLSX.utils.sheet_to_json(wb.Sheets[sn],{header:1,defval:''}),f.name+' · hoja '+sn),false)}else setData(ingest(parseCSV(await f.text()),f.name),false)}catch(x){$('#valid').innerHTML=`<div class="sim" role="alert">${esc(x.message)}</div>`}};
+$('#clear').onclick=()=>{RAW=[];DEMO=false;META=null;$('#valid').innerHTML='';buildFilters();render()};
+$('#demo').onclick=()=>{let s=7;const rnd=()=>(s=(s*16807)%2147483647)/2147483647,L=(b)=>Math.min(5,Math.max(1,Math.round(b+(rnd()-.5)*3))),rows=[['ID_anonimo','Institucion_codigo','Experiencia_anos','Formacion_IA','Frecuencia_uso_IA',...ITEMS]];for(let i=0;i<40;i++){const b=1.5+rnd()*3;rows.push(['S'+i,'SIM'+(1+i%3),Math.floor(rnd()*30),rnd()>.5?'Sí':'No',['Nunca','Mensualmente','Semanalmente','Diariamente'][Math.floor(rnd()*4)],...ITEMS.map(()=>L(b))])}setData(ingest(rows,'DATOS SIMULADOS generados al azar'),true)};
+
+/* Filtros */
+const FL=[['inst','Institución'],['exp','Experiencia (años)'],['form','Formación en IA'],['frec','Frecuencia de uso']];
+function buildFilters(){$('#filtros').innerHTML=FL.map(([k,t])=>{const v=[...new Set(RAW.map(r=>r[k]).filter(x=>x!==''))].sort();return`<label>${t}<select data-f="${k}"${v.length?'':' disabled'}><option value="">Todas</option>${v.map(x=>`<option>${esc(x)}</option>`).join('')}</select></label>`}).join('');$$('#filtros select').forEach(s=>s.onchange=()=>{F[s.dataset.f]=s.value;render()})}
+const rowsF=()=>RAW.filter(r=>Object.keys(F).every(k=>!F[k]||r[k]===F[k]));
+
+/* Gráficos SVG */
+const LC=['#b2182b','#ef8a62','#d0d0d0','#67a9cf','#2166ac'];
+function svg(W,H,inner,lab){return`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(lab)}" font-family="system-ui,sans-serif" font-size="12"><rect width="${W}" height="${H}" fill="#fff"/>${DEMO?`<text x="${W-6}" y="14" text-anchor="end" fill="#b00" font-weight="700">DATOS SIMULADOS</text>`:''}${inner}</svg>`}
+function cItems(rs){const W=600,rh=26,H=ITEMS.length*rh+44;let s='';ITEMS.forEach((c,i)=>{const v=rs.map(r=>r[c]).filter(x=>x!=null),m=mean(v),y=22+i*rh,col=Object.values(DIMS).find(d=>d.it.includes(c)).c,w=m==null?0:(m-1)/4*430;s+=`<text x="34" y="${y+14}" text-anchor="end">${c}</text><rect x="42" y="${y}" width="${w}" height="18" fill="${col}"/><text x="${46+w}" y="${y+14}">${fmt(m)} (n=${v.length})</text>`});for(let t=1;t<=5;t++)s+=`<line x1="${42+(t-1)/4*430}" x2="${42+(t-1)/4*430}" y1="18" y2="${H-26}" stroke="#ccc"/><text x="${42+(t-1)/4*430}" y="${H-10}" text-anchor="middle">${t}</text>`;return{html:svg(W,H,s,'Media por ítem en escala 1 a 5'),note:'Media Likert 1–5 por ítem; n = respuestas válidas del ítem. Azul = CD, naranja = IP, verde = ET.'}}
+function cStack(rs){const W=600,H=200;let s='',N=[];Object.values(DIMS).forEach((d,i)=>{const v=rs.flatMap(r=>d.it.map(c=>r[c])).filter(x=>x!=null),n=v.length,y=30+i*46;let x=150;N.push(d.n+' n='+n);s+=`<text x="144" y="${y+17}" text-anchor="end">${d.n}</text>`;for(let l=1;l<=5;l++){const p=n?v.filter(z=>z==l).length/n:0,w=p*430;s+=`<rect x="${x}" y="${y}" width="${w}" height="26" fill="${LC[l-1]}"/>`;if(p>=.07)s+=`<text x="${x+w/2}" y="${y+17}" text-anchor="middle" fill="${l==3?'#000':'#fff'}">${Math.round(p*100)}%</text>`;x+=w}});LC.forEach((c,i)=>s+=`<rect x="${12+i*115}" y="${H-24}" width="12" height="12" fill="${c}"/><text x="${28+i*115}" y="${H-14}" font-size="10">${LV[i].slice(0,18)}</text>`);return{html:svg(W,H,s,'Distribución porcentual de respuestas por dimensión'),note:'Cada barra suma 100 % de las respuestas válidas de la dimensión ('+N.join('; ')+').'}}
+function cHist(k,lab){return rs=>{const v=rs.map(r=>r[k]).filter(x=>x!=null),W=600,H=250,B=[];for(let i=0;i<8;i++)B.push(v.filter(x=>x>=1+i*.5&&(x<1.5+i*.5||(i==7&&x<=5))).length);const mx=Math.max(1,...B);let s='';B.forEach((b,i)=>{const h=b/mx*170,x=50+i*65;s+=`<rect x="${x}" y="${200-h}" width="58" height="${h}" fill="${DIMS[k.slice(1)].c}"/><text x="${x+29}" y="${195-h}" text-anchor="middle">${b}</text><text x="${x+29}" y="218" text-anchor="middle" font-size="10">${fmt(1+i*.5,1)}–${fmt(1.5+i*.5,1)}</text>`});return{html:svg(W,H,s,'Histograma de '+lab),note:'Docentes por intervalo de la media de '+lab+'. n = '+v.length+' (solo quienes respondieron todos los ítems).'}}}
+function cScat(rs){const p=rs.filter(r=>r.PCD!=null&&r.PIP!=null),x=p.map(r=>r.PCD),y=p.map(r=>r.PIP),W=600,H=340;let s='';for(let t=1;t<=5;t++){const a=60+(t-1)/4*500,b=290-(t-1)/4*250;s+=`<line x1="${a}" x2="${a}" y1="40" y2="290" stroke="#e3e3e3"/><line x1="60" x2="560" y1="${b}" y2="${b}" stroke="#e3e3e3"/><text x="${a}" y="308" text-anchor="middle">${t}</text><text x="52" y="${b+4}" text-anchor="end">${t}</text>`}p.forEach(r=>s+=`<circle cx="${60+(r.PCD-1)/4*500}" cy="${290-(r.PIP-1)/4*250}" r="5" fill="#1d4e89" opacity=".45"/>`);s+=`<text x="310" y="330" text-anchor="middle">Competencias IA (media)</text><text transform="translate(14 165) rotate(-90)" text-anchor="middle">Integración pedagógica (media)</text>`;const rho=spear(x,y),r=pearson(x,y);return{html:svg(W,H,s,'Dispersión entre competencias en IA e integración pedagógica'),note:`n = ${p.length}. rho de Spearman = ${fmt(rho)}; r de Pearson = ${fmt(r)}. Asociación descriptiva: no implica que una variable cause la otra.`,rho}}
+function cHeat(rs){const K=['PCD','PIP','PET'],N=['Competencias','Integración','Ética'],W=420,H=250;let s='',nn=0;K.forEach((a,i)=>K.forEach((b,j)=>{const p=rs.filter(r=>r[a]!=null&&r[b]!=null);nn=p.length;const v=i==j?1:spear(p.map(r=>r[a]),p.map(r=>r[b])),t=v==null?0:Math.abs(v),col=v==null?'#eee':v>=0?`rgb(${255-t*220|0},${255-t*150|0},255)`:`rgb(255,${255-t*180|0},${255-t*180|0})`;s+=`<rect x="${110+j*95}" y="${40+i*58}" width="92" height="55" fill="${col}" stroke="#fff"/><text x="${156+j*95}" y="${73+i*58}" text-anchor="middle" font-weight="700">${fmt(v)}</text>`}));N.forEach((n,i)=>s+=`<text x="104" y="${72+i*58}" text-anchor="end">${n}</text><text x="${156+i*95}" y="32" text-anchor="middle">${n}</text>`);return{html:svg(W,H,s,'Matriz de correlaciones de Spearman entre dimensiones'),note:'rho de Spearman entre medias de dimensión (casos completos; mín. n por par ≈ '+nn+'). Azul = positiva, rojo = negativa.'}}
+function cFrec(rs){const m=new Map();rs.forEach(r=>{const k=r.frec||'Sin dato';m.set(k,(m.get(k)||0)+1)});const E=[...m],mx=Math.max(1,...E.map(e=>e[1])),W=600,H=E.length*34+30;let s='';E.forEach(([k,n],i)=>{const w=n/mx*380,y=14+i*34;s+=`<text x="150" y="${y+17}" text-anchor="end">${esc(k)}</text><rect x="158" y="${y}" width="${w}" height="24" fill="#0f6e6e"/><text x="${162+w}" y="${y+17}">${n} (${fmt(n/rs.length*100,1)} %)</text>`});return{html:svg(W,H,s,'Frecuencia de uso de IA'),note:'Denominador = '+rs.length+' docentes en el filtro. «Sin dato» = valor perdido.'}}
+function tUso(rs){const m=new Map();rs.forEach(r=>{const k=r.frec||'Sin dato';(m.get(k)||m.set(k,[]).get(k)).push(r)});const f=(a,k)=>{const v=a.map(r=>r[k]).filter(x=>x!=null);return a.length<5?'n&lt;5':fmt(mean(v))};return{html:`<div class="tw"><table id="tUsoT"><thead><tr><th>Frecuencia de uso</th><th>n</th><th>Media competencias</th><th>Media integración</th><th>Media ética</th></tr></thead><tbody>${[...m].map(([k,a])=>`<tr><td>${esc(k)}</td><td>${a.length}</td><td>${f(a,'PCD')}</td><td>${f(a,'PIP')}</td><td>${f(a,'PET')}</td></tr>`).join('')}</tbody></table></div>`,note:'Compara uso con integración sin inferir causas. Se oculta la media de grupos con n &lt; 5.',csv:'tUsoT'}}
+function tDesc(rs){const L=[...ITEMS.map(c=>[c,rs.map(r=>r[c])]),...Object.entries(DIMS).map(([k,d])=>[d.n+' (media)',rs.map(r=>r['P'+k])])];return{html:`<div class="tw"><table id="tDescT"><thead><tr><th>Variable</th><th>n válido</th><th>% perdido</th><th>Media</th><th>DE</th><th>Mín</th><th>Máx</th></tr></thead><tbody>${L.map(([c,a])=>{const v=a.filter(x=>x!=null);return`<tr><td>${c}</td><td>${v.length}</td><td>${fmt((1-v.length/rs.length)*100,1)}</td><td>${fmt(mean(v))}</td><td>${fmt(sd(v))}</td><td>${v.length?fmt(Math.min(...v)):'—'}</td><td>${v.length?fmt(Math.max(...v)):'—'}</td></tr>`}).join('')}</tbody></table></div>`,note:'Denominador = '+rs.length+' docentes. Los perdidos no se imputan.',csv:'tDescT'}}
+const CH=[['c1','1 Caracterización · Frecuencia de uso de IA (barras)',cFrec],['c2','2–4 Medias por ítem: competencias, integración y ética (barras)',cItems],['c3','2–4 Distribución por nivel de acuerdo (barras apiladas)',cStack],['c4','2 Histograma de competencias en IA',cHist('PCD','competencias en IA')],['c5','3 Histograma de integración pedagógica',cHist('PIP','integración pedagógica')],['c6','5 Competencias vs. integración (dispersión)',cScat],['c7','5 Matriz de correlaciones (mapa de calor)',cHeat],['c8','5 Uso de IA vs. integración pedagógica (tabla)',tUso],['c9','Estadísticos descriptivos (tabla)',tDesc]];
+$('#charts').innerHTML=CH.map(([id,t])=>`<figure class="card"><h4>${t}</h4><div id="${id}"></div><p class="note" id="${id}n"></p><button class="sec noprint" type="button" data-d="${id}">Descargar</button></figure>`).join('');
+$('#charts').onclick=e=>{const id=e.target.dataset.d;if(!id)return;const t=$('#'+id+' table');t?tableCSV(t,id+'.csv'):png(id)};
+
+function render(){const all=RAW.length,rs=rowsF(),n=rs.length,E=$('#estado');
+if(!all){E.innerHTML='<div class="pend"><strong>PENDIENTE DE RECOLECCIÓN.</strong> No hay respuestas docentes reales cargadas. Ningún indicador ni gráfico se muestra hasta que cargues la hoja <code>Respuestas_docentes</code> con datos reales o una maqueta simulada.</div>';$('#kpis').innerHTML='';CH.forEach(([id])=>{$('#'+id).innerHTML='<p class="empty">Pendiente de recolección: sin datos reales.</p>';$('#'+id+'n').textContent=''});$('#hall').className='pend';$('#hall').textContent='[PENDIENTE: sin datos reales cargados]';return}
+const r=META;E.innerHTML=DEMO?'<div class="sim">DATOS SIMULADOS · maqueta de funcionamiento · NO SON RESULTADOS DE LA INVESTIGACIÓN</div>':`<div class="ok"><strong>Datos reales cargados.</strong> Fuente: ${esc(r.src)} · fecha de corte: ${r.date}</div>`;
+$('#valid').innerHTML=`<details${DEMO?'':' open'}><summary>Validación de datos</summary><ul><li>Filas leídas: ${r.read}; usadas: ${r.used}; descartadas sin ningún ítem: ${r.noItems}.</li><li>Valores inválidos tratados como perdidos: ${r.invalid}. IDs duplicados: ${r.dup}.</li><li>% perdido por ítem: ${ITEMS.map(c=>c+' '+fmt(r.miss[c]/Math.max(1,r.read+0)*100,0)+'%').join(' · ')}</li>${r.ign.length?`<li>Columnas con posibles datos personales ignoradas: ${r.ign.map(esc).join(', ')}.</li>`:''}${r.warn.map(w=>`<li>${esc(w)}</li>`).join('')}</ul></details>`;
+const small=n<5;const hs=[['Docentes (n)',n+' de '+all]];if(!small)hs.push(['Competencias IA',fmt(mean(rs.map(x=>x.PCD).filter(v=>v!=null)))],['Integración pedagógica',fmt(mean(rs.map(x=>x.PIP).filter(v=>v!=null)))],['Ética',fmt(mean(rs.map(x=>x.PET).filter(v=>v!=null)))]);
+$('#kpis').innerHTML=hs.map(([a,b])=>`<div class="kpi"><small>${a}</small><b>${b}</b></div>`).join('');
+let sc=null;CH.forEach(([id,,fn])=>{const el=$('#'+id),nt=$('#'+id+'n');if(!n){el.innerHTML='<p class="empty">Sin datos para este filtro.</p>';nt.textContent='';return}if(small){el.innerHTML='<p class="empty">n &lt; 5: no se muestra para proteger el anonimato.</p>';nt.textContent='';return}const o=fn(rs);el.innerHTML=o.html;nt.innerHTML=o.note;if(o.rho!==undefined)sc=o});
+const h=$('#hall');if(small||!sc){h.className='pend';h.textContent='[PENDIENTE: muestra insuficiente con el filtro actual]';return}
+h.className=DEMO?'sim':'ok';h.innerHTML=(DEMO?'SIMULADO, NO ES UN HALLAZGO. ':'')+`En la muestra cargada (n = ${n}), la asociación entre competencias en IA e integración pedagógica fue rho = ${fmt(sc.rho)} (Spearman). Es un resultado descriptivo de esta muestra: no permite generalizar a la población ni afirmar causalidad. Revisa la tabla «uso vs. integración» para ver si un mayor uso coincide con mayor integración.`}
+buildFilters();render();
+const links=$$('#menu a');$$('main>section').forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')=='#'+e.target.id))}),{rootMargin:'-30% 0px -60% 0px'}).observe(s));
+</script>
+</body>
+</html>
